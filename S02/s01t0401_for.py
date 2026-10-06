@@ -7,7 +7,8 @@ calcula la suma de 1 al 100
 
 import time
 
-#funcion que suma los primeros n numeros naturales
+#funcion que suma los primeros 
+# n numeros naturales
 def sum_of_n(n):
     total_sum = 0
     #sumando los n numeros
