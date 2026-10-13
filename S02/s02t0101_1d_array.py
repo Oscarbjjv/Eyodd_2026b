@@ -34,9 +34,10 @@ my_array = arr.array('i',[10,22,100,202,300,400,500,800,900,1000])
 #Busqueda de un elemento en el arreglo 
 num_to_search = 300
 
+my_array[7]=200
 try:
     
-    print(f"location 300: {my_array.index(num_to_search)}")     
+    print(f"location :{num_to_search} {my_array.index(num_to_search)}")     
 except:
     print(f"⚠️numero no encontrado❌")
     
