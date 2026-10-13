@@ -26,7 +26,17 @@ my_array = arr.array('i',[10,22,100,202,300,400,500,800,900,1000])
 # print(len(my_array))    
     
 #iteracion por indices
-for i in range(len(my_array)):
-    # print(f"Elemento en el indice {i+1} es: {my_array[i]}")
-   if my_array[i] %2 == 0:
-     print(f"elemento num{i+1}:{my_array[i]}")
+# for i in range(len(my_array)):
+#     # print(f"Elemento en el indice {i+1} es: {my_array[i]}")
+#    if my_array[i] %2 == 0:
+#      print(f"elemento num{i+1}:{my_array[i]}")
+
+#Busqueda de un elemento en el arreglo 
+num_to_search = 300
+
+try:
+    
+    print(f"location 300: {my_array.index(num_to_search)}")     
+except:
+    print(f"⚠️numero no encontrado❌")
+    
