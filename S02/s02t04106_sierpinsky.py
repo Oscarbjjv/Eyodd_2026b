@@ -1,5 +1,15 @@
 from array import array as arr
 
+# Borra pantalla con caracteres ANSI
+def clear_screen():
+    print("\033[2J\033[H", end="")
+
+# ANSI color codes
+RED = "\033[91m"
+YELLOW = "\033[93m"
+CYAN = "\033[96m"
+RESET = "\033[0m"
+
 # Parametros de mi cuadricula 
 rows = 10
 columns = 2 * rows - 1
@@ -29,7 +39,7 @@ center = columns // 2 #se hace divicion entera
 #Estebleciendo el centro en 1
 matrix [0][center] = 1
 
-print_matrix (matrix)
+# print_matrix (matrix)
 
 #Se calcula el resto de la matrix 
 #Siguiendo la logica del siperpinsky 
@@ -51,5 +61,21 @@ for row in range (1, rows):
         else:
             matrix[row][col]=0
 
-print()
-print_matrix(matrix)            
+# print()
+# print_matrix(matrix)            
+
+# Dibuja la matriz
+def draw_matrix(input_matrix, symbol="*"):
+    for row in input_matrix:
+        for cell in row:
+            if cell == 1:
+                print(CYAN + symbol + RESET, end="")
+            else:
+                print(RED + " ", end="")
+        print()
+
+# Limpia la pantalla antes de dibujar la matriz
+clear_screen()
+
+# Dibuja la matriz en pantalla
+draw_matrix(matrix, symbol="■")
